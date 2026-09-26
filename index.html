@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-CBT - Portal Ujian CBT</title>
+
+    <!-- Icon Website (Favicon Tab Browser) -->
+    <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxazscCFHNislI5fg4Te_x6cAOBY56vEuat0ZtepCEyxZploYV8Cm5H9SfdnghSgrfds8JTnB_RbcdaAix_TIoj2FuQqG4vBB3bh7BA1IuohbTiZuzdhMo4afxSVLFrUSgD2gcZVTSkBr-q2fdnG0m9usV89lCwh2AltTrl4TzkA5NqRDaToH95uaZrfRw/s320/favicon.png">
+
+
+    <style>
+        /* Hilangkan semua jarak margin dasar */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Mencegah scrollbar muncul di luar iframe */
+            background-color: #f8fafc; /* Warna background sama dengan Tailwind bg-slate-50 aplikasi Anda */
+        }
+
+        /* Container untuk memanipulasi posisi iframe */
+        .iframe-container {
+            position: absolute;
+            top: -3px; /* MENARIK IFRAME KE ATAS UNTUK MENYEMBUNYIKAN BANNER GOOGLE */
+            left: 0;
+            width: 100%;
+            height: calc(100% + 3px); /* Mengembalikan sisa tinggi di bawah agar tidak terpotong */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <!-- Ganti dengan link Google Apps Script Anda -->
+        <!-- allow="fullscreen; screen-wake-lock" + allowfullscreen: WAJIB agar aplikasi di dalam iframe
+             boleh masuk mode layar penuh (fullscreen) dan menahan layar tetap menyala saat ujian. -->
+        <iframe
+            src="https://script.google.com/macros/s/AKfycbz6c-Gehy5A1D_k8REil2vxtjpSjsMcj_FYBjnIRCKFAK-iJoCEcWDhvSjatdistT55hg/exec"
+            allow="fullscreen; screen-wake-lock"
+            allowfullscreen></iframe>
+    </div>
+</body>
+</html>
